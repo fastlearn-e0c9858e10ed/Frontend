@@ -1,0 +1,87 @@
+/* Include Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Navbar styling */
+.navbar {
+  color: #14cff0; /* Light blue background color */
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  margin-left: 20px; /* Space from the left edge */
+  font-weight: bold; /* Make the brand name bold */
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+
+}
+
+/* Align elements to the right and add spacing */
+.ml-auto {
+  margin-left: auto; /* Push elements to the right */
+  margin-right: 10px; /* Space from the right edge */
+}
+
+/* Flex styling for inline forms */
+.form-inline {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center align items vertically */
+}
+
+/* Margin adjustments for form controls */
+.form-control {
+  margin-right: 5px; /* Space between form controls */
+}
+
+/* Space between icon and text in nav links */
+.navbar .nav-link i {
+  margin-right: 5px; /* Space between icon and text */
+
+}
+
+/* Ensure dropdown menu appears correctly */
+.navbar-nav .dropdown-menu {
+  right: 0; /* Align dropdown to the right */
+  left: auto; /* Override left alignment */
+}
+
+
+
+/* Navbar icon styling */
+.navbar-icon {
+  width: 40px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+}
+
+/* Optional: Add additional styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #14cff0; /* Light blue background color */
+  color: white; /* Text color inside the navbar */
+}
+
+/* Styling for navbar links */
+.navbar-nav .nav-link {
+  color: white; /* Text color for nav links */
+}
+
+/* Styling for navbar brand */
+.navbar-brand {
+  color: white; /* Text color for the brand name */
+}
+
+/* Ensure dropdown menu text color matches */
+.dropdown-menu .dropdown-item {
+  color: #333; /* Text color for dropdown items */
+}
+
+/* Optional: Change color of dropdown items on hover */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #d6e0e5; /* Background color on hover */
+  color: #14cff0; /* Text color on hover */
+}
