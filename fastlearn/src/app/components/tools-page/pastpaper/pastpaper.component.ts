@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+
+
 
 @Component({
   selector: 'app-pastpaper',
   templateUrl: './pastpaper.component.html',
-  styleUrls: ['./pastpaper.component.css']
+  styleUrls: ['./pastpaper.component.css'],
 })
-export class PastpaperComponent {
 
+
+export class PastpaperComponent{
 }

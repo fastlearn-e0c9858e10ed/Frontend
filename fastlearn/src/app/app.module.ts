@@ -22,6 +22,17 @@ import { AboutusPageComponent } from './components/aboutus-page/aboutus-page.com
 import { DatabasePageComponent } from './components/database-page/database-page.component';
 import { PastpaperdbComponent } from './components/database-page/pastpaperdb/pastpaperdb.component';
 import { NotedbComponent } from './components/database-page/notedb/notedb.component';
+import { RedirectHomepageComponent } from './components/tools-page/redirect-homepage/redirect-homepage.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './components/tools-page/pastpaper/form/form.component';
+import { PastpapernavigateComponent } from './components/tools-page/pastpaper/pastpapernavigate/pastpapernavigate.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,13 +51,26 @@ import { NotedbComponent } from './components/database-page/notedb/notedb.compon
     AboutusPageComponent,
     DatabasePageComponent,
     PastpaperdbComponent,
-    NotedbComponent
+    NotedbComponent,
+    RedirectHomepageComponent,
+    FormComponent,
+    PastpapernavigateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatIconModule,
+    HttpClientModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
