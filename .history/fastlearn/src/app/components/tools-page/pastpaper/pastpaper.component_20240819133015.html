@@ -1,0 +1,47 @@
+<app-redirect-homepage></app-redirect-homepage>
+
+
+<mat-card class="form-card">
+  <mat-card-header>
+    <mat-card-title>Form Title</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Select Option 1</mat-label>
+        <mat-select formControlName="selectedOption1">
+          <mat-option *ngFor="let option of options1" [value]="option.value">
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Select Option 2</mat-label>
+        <mat-select formControlName="selectedOption2">
+          <mat-option *ngFor="let option of options2" [value]="option.value">
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Select Option 3</mat-label>
+        <mat-select formControlName="selectedOption3">
+          <mat-option *ngFor="let option of options3" [value]="option.value">
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Upload PDF</mat-label>
+        <input type="file" (change)="onFileChange($event)" accept=".pdf" />
+        <mat-icon>attach_file</mat-icon>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Upload</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+

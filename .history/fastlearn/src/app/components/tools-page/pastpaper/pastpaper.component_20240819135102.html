@@ -1,0 +1,65 @@
+<app-redirect-homepage></app-redirect-homepage>
+
+<!-- app.component.html -->
+<div class="container mt-4">
+  <h2>Upload Your Past Paper</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+
+    <!-- Dropdown for Option 1 -->
+    <div class="mb-3">
+      <label for="selectOption1" class="form-label">Select Year*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="selectedOption1" id="selectOption1" placeholder="Select an option">
+          <mat-option *ngFor="let option of options1" [value]="option.value">
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Option 2 -->
+    <div class="mb-3">
+      <label for="selectOption2" class="form-label">Select Subject*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="selectedOption2" id="selectOption2" placeholder="PF , DevOp , PDC">
+          <mat-option *ngFor="let option of options2" [value]="option.value">
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Option 3 -->
+    <div class="mb-3">
+      <label for="selectOption3" class="form-label">Select Option 3</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="selectedOption3" id="selectOption3" placeholder="Select an option">
+          <mat-option *ngFor="let option of options3" [value]="option.value">
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+        <!-- Dropdown for Option 3 -->
+        <div class="mb-3">
+          <label for="selectOption3" class="form-label">Select Option 3</label>
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-select formControlName="selectedOption3" id="selectOption3" placeholder="Select an option">
+              <mat-option *ngFor="let option of options3" [value]="option.value">
+                {{ option.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+    <!-- File Upload -->
+    <div class="mb-3">
+      <label for="uploadPdf" class="form-label">Upload PDF</label>
+      <input type="file" class="form-control" id="uploadPdf" (change)="onFileChange($event)" accept=".pdf" placeholder="Choose a file" />
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+</div>

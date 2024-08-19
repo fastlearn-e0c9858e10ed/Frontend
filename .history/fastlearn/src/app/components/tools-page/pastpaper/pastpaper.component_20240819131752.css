@@ -1,0 +1,15 @@
+/* app.component.css */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+button {
+  margin-top: 16px;
+}

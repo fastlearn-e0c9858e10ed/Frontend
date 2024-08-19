@@ -1,0 +1,33 @@
+/* Highlight form fields with a border */
+.mat-form-field .mat-form-field-outline {
+  border-color: #007bff; /* Highlight color for the border */
+}
+
+.mat-form-field .mat-form-field-outline.mat-focused {
+  border-color: #28a745; /* Color when the field is focused */
+}
+
+/* Add a box shadow to highlight the field */
+.mat-form-field .mat-form-field-outline.mat-form-field-outline--focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Highlight shadow color */
+}
+
+/* Apply custom styles to mat-select */
+.mat-select .mat-select-trigger {
+  border: 1px solid #007bff; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 8px; /* Padding inside the select box */
+}
+
+/* Highlight the upload input */
+input[type="file"] {
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+/* Add a hover effect for all input fields */
+.mat-form-field .mat-form-field-outline:hover {
+  border-color: #007bff;
+}

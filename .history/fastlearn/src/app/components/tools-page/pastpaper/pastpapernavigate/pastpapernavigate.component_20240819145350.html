@@ -1,0 +1,48 @@
+
+<div class="container mt-4">
+  <h1 class="text-center mb-1">View the database to access pdfs or Use Model </h1>
+  <p class="center-text">To apply the model on your past paper and store them in vector database upload them first and use the Ai to ask question from that learned data.</p>
+  <div class="scrollable-container">
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="card shadow-sm">
+          <img
+            title="Upload PastPaper"
+            class="card-img-top"
+            src="../../../../assets/tools_cards_img/pastpaper.jpg"
+            alt="Upload PastPaper"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">Upload PastPaper</h5>
+            <button
+              class="btn btn-primary view-btn"
+              [routerLink]="['/pastpaper']"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="card shadow-sm">
+          <img
+            title="Upload PastPaper"
+            class="card-img-top"
+            src="../../../../assets/tools_cards_img/notes.jpg"
+            alt="Upload PastPaper"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">Upload Notes</h5>
+            <button
+              class="btn btn-primary view-btn"
+              [routerLink]="['/note']"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+</div>

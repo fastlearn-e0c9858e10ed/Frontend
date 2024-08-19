@@ -1,0 +1,101 @@
+<app-redirect-homepage></app-redirect-homepage>
+
+<!-- app.component.html -->
+<div class="container mt-4 custom-container">
+  <h2>Upload Your Past Paper</h2>
+  <form
+    [formGroup]="myForm"
+    (ngSubmit)="onSubmit()"
+    class="needs-validation"
+    novalidate
+  >
+<!-- Dropdown for Year -->
+<div class="mb-3">
+  <label for="selectOption1" class="form-label">Select Year*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="selectedOption1"
+      id="selectOption1"
+      placeholder="Choose a year"
+    >
+      <mat-option *ngFor="let option of getOptionsByCategory('year')" [value]="option.value">
+        {{ option.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<!-- Dropdown for Subject -->
+<div class="mb-3">
+  <label for="selectOption2" class="form-label">Select Subject*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="selectedOption2"
+      id="selectOption2"
+      placeholder="Choose a subject"
+    >
+      <mat-option *ngFor="let option of getOptionsByCategory('subject')" [value]="option.value">
+        {{ option.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- Add Subject Button -->
+ <!-- Add Subject Button Section -->
+<div class="d-flex align-items-center mt-2">
+  <p class="mb-0 me-2">If subject does not exist*</p>
+  <button type="button" class="btn add-subject-button" (click)="redirectToAddSubject()">
+    Add New Subject
+  </button>
+</div>
+
+</div>
+
+<!-- Dropdown for Season -->
+<div class="mb-3">
+  <label for="selectOption3" class="form-label">Select Season*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="selectedOption3"
+      id="selectOption3"
+      placeholder="Choose a season"
+    >
+      <mat-option *ngFor="let option of getOptionsByCategory('season')" [value]="option.value">
+        {{ option.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<!-- Dropdown for Type -->
+<div class="mb-3">
+  <label for="selectOption4" class="form-label">Select Type*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="selectedOption4"
+      id="selectOption4"
+      placeholder="Choose a type"
+    >
+      <mat-option *ngFor="let option of getOptionsByCategory('type')" [value]="option.value">
+        {{ option.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<!-- File Upload -->
+<div class="mb-3">
+  <label for="uploadPdf" class="form-label">Upload PDF*</label>
+  <input
+    type="file"
+    class="form-control"
+    id="uploadPdf"
+    (change)="onFileChange($event)"
+    accept=".pdf"
+    placeholder="Choose a file"
+  />
+</div>
+
+<!-- Submit Button -->
+<button type="submit" class="btn btn-primary w-100" [disabled]="myForm.invalid || !selectedFile">Upload</button>
+  </form>
+</div>

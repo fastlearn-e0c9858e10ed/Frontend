@@ -1,0 +1,68 @@
+<app-redirect-homepage></app-redirect-homepage>
+<!-- app.component.html -->
+<div class="container mt-4">
+  <h2>Form Title</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+
+    <!-- Dropdown for Year -->
+    <div class="mb-3">
+      <label for="selectYear" class="form-label">Select Year</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="selectedYear" id="selectYear" placeholder="Select a year">
+          <mat-option *ngFor="let year of years" [value]="year.value">
+            {{ year.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Subject -->
+    <div class="mb-3">
+      <label for="selectSubject" class="form-label">Select Subject</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="selectedSubject" id="selectSubject" placeholder="Select a subject">
+          <mat-option *ngFor="let subject of subjects" [value]="subject.value">
+            {{ subject.viewValue }}
+          </mat-option>
+        </mat-select>
+        <!-- Button to redirect to Add Subject Page -->
+        <button *ngIf="!subjects.length" (click)="redirectToAddSubject()" mat-raised-button color="primary" class="mt-2">
+          Add Subject
+        </button>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Season -->
+    <div class="mb-3">
+      <label for="selectSeason" class="form-label">Select Season</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="selectedSeason" id="selectSeason" placeholder="Select a season">
+          <mat-option *ngFor="let season of seasons" [value]="season.value">
+            {{ season.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Type -->
+    <div class="mb-3">
+      <label for="selectType" class="form-label">Select Type</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="selectedType" id="selectType" placeholder="Select a type">
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{ type.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- File Upload -->
+    <div class="mb-3">
+      <label for="uploadPdf" class="form-label">Upload PDF</label>
+      <input type="file" class="form-control" id="uploadPdf" (change)="onFileChange($event)" accept=".pdf" />
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+</div>

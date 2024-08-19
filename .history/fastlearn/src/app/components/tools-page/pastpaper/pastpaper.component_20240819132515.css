@@ -1,0 +1,19 @@
+/* app.component.css */
+.form-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+button {
+  margin-top: 16px;
+}
