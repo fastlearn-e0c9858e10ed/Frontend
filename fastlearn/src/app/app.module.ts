@@ -14,6 +14,8 @@ import { IntroductionComponent } from './components/home-page/introduction/intro
 import { NewsSliderComponent } from './components/home-page/news-slider/news-slider.component';
 import { ToolsNavigateComponent } from './components/home-page/tools-navigate/tools-navigate.component';
 import { DatabaseNavigateComponent } from './components/home-page/database-navigate/database-navigate.component';
+import { ToolsPageComponent } from './components/tools-page/tools-page.component';
+import { PastpaperComponent } from './components/tools-page/pastpaper/pastpaper.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { DatabaseNavigateComponent } from './components/home-page/database-navig
     IntroductionComponent,
     NewsSliderComponent,
     ToolsNavigateComponent,
-    DatabaseNavigateComponent
+    DatabaseNavigateComponent,
+    ToolsPageComponent,
+    PastpaperComponent
   ],
   imports: [
     BrowserModule,
