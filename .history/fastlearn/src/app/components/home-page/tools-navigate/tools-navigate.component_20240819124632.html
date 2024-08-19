@@ -1,6 +1,6 @@
 <div class="container mt-4">
-  <h1 class="text-center mb-1">View Recent Data</h1>
-  <p>Every Note and Past Paper you have uploaded is being stored so every student have access from a large database entries which will build stronger over time.</p>
+  <h1 class="text-center mb-1">Tools and Services Available</h1>
+  <p>To apply the model on your past paper and store them in vector database upload them first and use the Ai to ask question from that learned data.</p>
   <div class="scrollable-container">
     <div class="row justify-content-center">
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
@@ -12,10 +12,10 @@
             alt="Upload PastPaper"
           />
           <div class="card-body text-center">
-            <h5 class="card-title">See All Available Past Paper</h5>
+            <h5 class="card-title">Upload PastPaper</h5>
             <button
               class="btn btn-primary view-btn"
-              [routerLink]="['/pastpaperdb']"
+              [routerLink]="['toolspage/pastpaper']"
             >
               View
             </button>
@@ -31,10 +31,10 @@
             alt="Upload PastPaper"
           />
           <div class="card-body text-center">
-            <h5 class="card-title">See All Available Notes</h5>
+            <h5 class="card-title">Upload Notes</h5>
             <button
               class="btn btn-primary view-btn"
-              [routerLink]="['/notedb']"
+              [routerLink]="['/pastpaper-page']"
             >
               View
             </button>

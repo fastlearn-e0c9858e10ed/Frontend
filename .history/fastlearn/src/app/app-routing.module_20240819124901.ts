@@ -7,8 +7,6 @@ import { PastpaperComponent } from './components/tools-page/pastpaper/pastpaper.
 import { ToolsPageComponent } from './components/tools-page/tools-page.component';
 import { SettingPageComponent } from './components/setting-page/setting-page.component';
 import { AboutusPageComponent } from './components/aboutus-page/aboutus-page.component';
-import { PastpaperdbComponent } from './components/database-page/pastpaperdb/pastpaperdb.component';
-import { NotedbComponent } from './components/database-page/notedb/notedb.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -19,10 +17,6 @@ const routes: Routes = [
   { path: 'note', component: NoteComponent},
   { path: 'settingpage', component:SettingPageComponent},
   { path: 'aboutus', component:AboutusPageComponent},
-  { path: 'pastpaperdb', component:PastpaperdbComponent },
-  { path: 'notedb', component: NotedbComponent},
-  { path: 'database-page/notedb', component: NotedbComponent },
-  { path: 'database-page/pastpaperdb', component: PastpaperdbComponent },
 ];
 
 @NgModule({

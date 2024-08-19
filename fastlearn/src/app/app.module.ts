@@ -16,6 +16,12 @@ import { ToolsNavigateComponent } from './components/home-page/tools-navigate/to
 import { DatabaseNavigateComponent } from './components/home-page/database-navigate/database-navigate.component';
 import { ToolsPageComponent } from './components/tools-page/tools-page.component';
 import { PastpaperComponent } from './components/tools-page/pastpaper/pastpaper.component';
+import { NoteComponent } from './components/tools-page/note/note.component';
+import { SettingPageComponent } from './components/setting-page/setting-page.component';
+import { AboutusPageComponent } from './components/aboutus-page/aboutus-page.component';
+import { DatabasePageComponent } from './components/database-page/database-page.component';
+import { PastpaperdbComponent } from './components/database-page/pastpaperdb/pastpaperdb.component';
+import { NotedbComponent } from './components/database-page/notedb/notedb.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +34,13 @@ import { PastpaperComponent } from './components/tools-page/pastpaper/pastpaper.
     ToolsNavigateComponent,
     DatabaseNavigateComponent,
     ToolsPageComponent,
-    PastpaperComponent
+    PastpaperComponent,
+    NoteComponent,
+    SettingPageComponent,
+    AboutusPageComponent,
+    DatabasePageComponent,
+    PastpaperdbComponent,
+    NotedbComponent
   ],
   imports: [
     BrowserModule,

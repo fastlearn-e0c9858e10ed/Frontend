@@ -31,13 +31,13 @@
         </mat-menu>
       </li>
 
-      <li class="nav-item" [matMenuTriggerFor]="dbMenu">
+      <li class="nav-item" [matMenuTriggerFor]="toolsMenu">
         <a class="nav-link" routerLink="#">
           <i class="bi bi-database"></i> DATABASE
         </a>
-        <mat-menu #dbMenu="matMenu">
-          <button mat-menu-item routerLink="/database-page/notedb">Notes DB</button>
-          <button mat-menu-item routerLink="/database-page/pastpaperdb">Past Paper DB</button>
+        <mat-menu #toolsMenu="matMenu">
+          <button mat-menu-item routerLink="/toolspage/note">Notes</button>
+          <button mat-menu-item routerLink="/toolspage/pastpaper">Past Paper</button>
         </mat-menu>
       </li>
     </ul>

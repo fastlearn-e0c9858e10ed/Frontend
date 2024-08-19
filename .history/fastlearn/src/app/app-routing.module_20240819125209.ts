@@ -21,8 +21,6 @@ const routes: Routes = [
   { path: 'aboutus', component:AboutusPageComponent},
   { path: 'pastpaperdb', component:PastpaperdbComponent },
   { path: 'notedb', component: NotedbComponent},
-  { path: 'database-page/notedb', component: NotedbComponent },
-  { path: 'database-page/pastpaperdb', component: PastpaperdbComponent },
 ];
 
 @NgModule({

@@ -5,24 +5,12 @@ import { ToolsNavigateComponent } from './components/home-page/tools-navigate/to
 import { NoteComponent } from './components/tools-page/note/note.component';
 import { PastpaperComponent } from './components/tools-page/pastpaper/pastpaper.component';
 import { ToolsPageComponent } from './components/tools-page/tools-page.component';
-import { SettingPageComponent } from './components/setting-page/setting-page.component';
-import { AboutusPageComponent } from './components/aboutus-page/aboutus-page.component';
-import { PastpaperdbComponent } from './components/database-page/pastpaperdb/pastpaperdb.component';
-import { NotedbComponent } from './components/database-page/notedb/notedb.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomePageComponent },
   { path: 'toolspage/note', component: NoteComponent},
   { path: 'toolspage/pastpaper', component: PastpaperComponent},
-  { path: 'pastpaper', component: PastpaperComponent},
-  { path: 'note', component: NoteComponent},
-  { path: 'settingpage', component:SettingPageComponent},
-  { path: 'aboutus', component:AboutusPageComponent},
-  { path: 'pastpaperdb', component:PastpaperdbComponent },
-  { path: 'notedb', component: NotedbComponent},
-  { path: 'database-page/notedb', component: NotedbComponent },
-  { path: 'database-page/pastpaperdb', component: PastpaperdbComponent },
 ];
 
 @NgModule({
