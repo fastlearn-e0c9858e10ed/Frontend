@@ -1,0 +1,62 @@
+.ask-prompt-container {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+h3 {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.prompt-input-section {
+  margin-bottom: 20px;
+}
+
+.prompt-input-section label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.prompt-input-section input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.status-section {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+.status-section i {
+  margin-right: 5px;
+}
+
+.reply-section {
+  margin-top: 20px;
+}
+
+.reply-section h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.reply-box {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,20 @@
+<div class="ask-ai-container">
+  <h2>ASK AI</h2>
+
+  <div class="input-section">
+    <label for="prompt-input">Enter a Prompt</label>
+    <textarea id="prompt-input" [(ngModel)]="prompt" placeholder="Enter a Prompt"></textarea>
+  </div>
+
+  <div class="status-section">
+    <span class="status-icon">⭐</span>
+    <span class="status-text">STATUS: {{statusMessage}}</span>
+  </div>
+
+  <div class="reply-section">
+    <h4>Reply</h4>
+    <div class="reply-box">
+      {{reply}}
+    </div>
+  </div>
+</div>

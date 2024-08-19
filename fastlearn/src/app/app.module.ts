@@ -34,6 +34,7 @@ import { FormComponent } from './components/tools-page/pastpaper/form/form.compo
 import { PastpapernavigateComponent } from './components/tools-page/pastpaper/pastpapernavigate/pastpapernavigate.component';
 import { AddsubjectComponent } from './components/addsubject/addsubject.component';
 import { RouterModule } from '@angular/router';
+import { AskpromptComponent } from './components/askprompt/askprompt.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { RouterModule } from '@angular/router';
     RedirectHomepageComponent,
     FormComponent,
     PastpapernavigateComponent,
-    AddsubjectComponent
+    AddsubjectComponent,
+    AskpromptComponent
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'database-page/notedb', component: NotedbComponent },
   { path: 'database-page/pastpaperdb', component: PastpaperdbComponent },
   { path: 'addsubject',component: AddsubjectComponent},
-  {path:  'askprompt',component: AskpromptComponent}
+  {path: 'askprompt',component: AskpromptComponent}
 ];
 
 @NgModule({

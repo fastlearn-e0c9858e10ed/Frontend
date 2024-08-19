@@ -87,7 +87,7 @@
 
 .papers-list {
   margin-top: 10px;
-  max-height: 700px; /* Adjust height as needed */
+  max-height: 900px; /* Adjust height as needed */
   overflow-y: auto; /* Enables vertical scrolling */
   padding-right: 10px; /* Add some padding to avoid scroll bar overlap */
 }

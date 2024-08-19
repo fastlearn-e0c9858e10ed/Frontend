@@ -18,14 +18,6 @@ export class PastpaperdbComponent {
   papers = [
     { name: 'PAST PAPER 1', url: 'path-to-past-paper-1.pdf' },
     { name: 'PAST PAPER 2', url: 'path-to-past-paper-2.pdf' },
-    { name: 'PAST PAPER 1', url: 'path-to-past-paper-1.pdf' },
-    { name: 'PAST PAPER 2', url: 'path-to-past-paper-2.pdf' },
-    { name: 'PAST PAPER 1', url: 'path-to-past-paper-1.pdf' },
-    { name: 'PAST PAPER 2', url: 'path-to-past-paper-2.pdf' },
-    { name: 'PAST PAPER 1', url: 'path-to-past-paper-1.pdf' },
-    { name: 'PAST PAPER 2', url: 'path-to-past-paper-2.pdf' },
-    { name: 'PAST PAPER 1', url: 'path-to-past-paper-1.pdf' },
-    { name: 'PAST PAPER 2', url: 'path-to-past-paper-2.pdf' },
     // Add more past papers here
   ];
 

@@ -1,0 +1,25 @@
+<app-redirect-homepage></app-redirect-homepage>
+<div class="ask-prompt-container">
+  <h3>ASK AI</h3>
+  <div class="prompt-input-section">
+    <label for="prompt">Enter a Prompt</label>
+    <input
+      type="text"
+      id="prompt"
+      class="form-control"
+      placeholder="Enter a Prompt"
+      [(ngModel)]="userPrompt"
+    />
+  </div>
+
+  <div class="status-section">
+    <p><i class="bi bi-star"></i> STATUS: Generating......</p>
+  </div>
+
+  <div class="reply-section">
+    <h5>Reply</h5>
+    <div class="reply-box">
+      <p>{{ aiResponse }}</p>
+    </div>
+  </div>
+</div>
