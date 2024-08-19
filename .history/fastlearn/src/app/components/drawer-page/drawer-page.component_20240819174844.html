@@ -1,0 +1,75 @@
+<!-- Drawer Icon -->
+<i class="bi bi-list navbar-icon mr-2" style="font-size: 24px; cursor: pointer;" (click)="toggleDrawer()"></i>
+
+<div class="drawer" [ngClass]="{'drawer-open': isDrawerOpen}">
+  <div class="drawer-content">
+    <div class="drawer-header">
+      <img src="../../../assets/header_icons/fast.png" alt="Custom Icon" class="navbar-icon mr-2">
+      <h4 class="drawer-title">FAST LEARN</h4>
+      <button type="button" class="btn btn-secondary close-btn" (click)="closeDrawer()">X</button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Home Section -->
+      <div class="drawer-section">
+        <div class="drawer-item">
+          <a routerLink="/homepage" class="drawer-link">
+            <i class="bi bi-house-door tool-icon"></i>
+            <span class="drawer-item-title">Home</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tools and Services Section -->
+      <div class="drawer-section">
+        <h5 class="drawer-heading">TOOLS AND SERVICES</h5>
+        <div class="drawer-item">
+          <a routerLink="/toolspage/pastpaper" class="drawer-link">
+            <i class="bi bi-file-earmark-text tool-icon"></i>
+            <span class="drawer-item-title">Past Paper Tool</span>
+          </a>
+        </div>
+        <div class="drawer-item">
+          <a routerLink="/toolspage/note" class="drawer-link">
+            <i class="bi bi-file-earmark-text tool-icon"></i>
+            <span class="drawer-item-title">Notes Tool</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- All Material Stored Section -->
+      <div class="drawer-section">
+        <h5 class="drawer-heading">ALL MATERIAL STORED</h5>
+        <div class="drawer-item">
+          <a routerLink="/pastpaperdb" class="drawer-link">
+            <i class="bi bi-database tool-icon"></i>
+            <span class="drawer-item-title">Past Papers</span>
+          </a>
+        </div>
+        <div class="drawer-item">
+          <a routerLink="/notedb" class="drawer-link">
+            <i class="bi bi-database tool-icon"></i>
+            <span class="drawer-item-title">Stored Notes</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Options Section -->
+      <div class="drawer-section">
+        <h5 class="drawer-heading">OPTIONS</h5>
+        <div class="drawer-item">
+          <a routerLink="/settingpage" class="drawer-link">
+            <i class="bi bi-gear tool-icon"></i>
+            <span class="drawer-item-title">Settings</span>
+          </a>
+        </div>
+        <div class="drawer-item">
+          <a routerLink="/aboutus" class="drawer-link">
+            <i class="bi bi-people tool-icon"></i>
+            <span class="drawer-item-title">About Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

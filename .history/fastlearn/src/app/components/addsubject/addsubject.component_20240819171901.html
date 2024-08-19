@@ -1,0 +1,26 @@
+<!-- Add Subject Form Container -->
+<div class="container mt-4">
+  <h2>Add New Subject</h2>
+  <form [formGroup]="addSubjectForm" (ngSubmit)="onSubmit()">
+    <!-- Subject Name Input -->
+    <div class="mb-3">
+      <label for="subjectName" class="form-label">Subject Name*</label>
+      <input
+        type="text"
+        id="subjectName"
+        class="form-control"
+        formControlName="subjectName"
+        placeholder="Enter subject name"
+        required
+      />
+      <div *ngIf="addSubjectForm.get('subjectName').invalid && addSubjectForm.get('subjectName').touched" class="text-danger">
+        Subject name is required.
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary w-100" [disabled]="addSubjectForm.invalid">
+      Add Subject
+    </button>
+  </form>
+</div>

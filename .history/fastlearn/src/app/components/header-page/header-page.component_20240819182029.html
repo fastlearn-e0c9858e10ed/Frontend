@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #85dbeb;">
+  <a class="navbar-brand ml-2 d-flex align-items-center" routerLink="/">
+    <!-- Drawer Icon -->
+
+
+
+    <!-- Fast Learn Icon and Text -->
+    <img src="../../../assets/header_icons/fast.png" alt="Custom Icon" class="navbar-icon mr-2">
+    FAST LEARN
+  </a>
+
+  <!-- Toggler for mobile view -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar content -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/homepage">
+          <i class="bi bi-house-door"></i> HOME
+        </a>
+      </li>
+
+      <li class="nav-item" [matMenuTriggerFor]="toolsMenu">
+        <a class="nav-link" routerLink="#">
+          <i class="bi bi-tools"></i> TOOLS
+        </a>
+        <mat-menu #toolsMenu="matMenu">
+          <button mat-menu-item routerLink="/toolspage/note">Notes</button>
+          <button mat-menu-item routerLink="/toolspage/pastpaper">Past Paper</button>
+        </mat-menu>
+      </li>
+
+      <li class="nav-item" [matMenuTriggerFor]="dbMenu">
+        <a class="nav-link" routerLink="#">
+          <i class="bi bi-database"></i> DATABASE
+        </a>
+        <mat-menu #dbMenu="matMenu">
+          <button mat-menu-item routerLink="/database-page/notedb">Notes DB</button>
+          <button mat-menu-item routerLink="/database-page/pastpaperdb">Past Paper DB</button>
+        </mat-menu>
+      </li>
+    </ul>
+    <div class="ml-auto d-flex align-items-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/settingpage">
+            <i class="bi bi-gear"></i> SETTINGS
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus">
+            <i class="bi bi-people"></i> ABOUT US
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

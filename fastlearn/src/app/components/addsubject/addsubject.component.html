@@ -1,0 +1,72 @@
+<h2 class="d-flex align-items-center mb-4">
+  <button title="home" (click)="viewHomePage()" class="btn btn-link text-dark fw-bold">
+    <i class="bi bi-arrow-left fs-4 me-2"></i>
+    <i class="bi bi-tools fs-4 me-2"></i>
+  </button>
+</h2>
+
+<!-- Add Subject Form Container -->
+<div class="container mt-4">
+  <h2>Add New Course</h2>
+  <form [formGroup]="addSubjectForm" (ngSubmit)="confirmAddCourse()">
+    <!-- Course ID Input -->
+    <div class="mb-3">
+      <label for="courseId" class="form-label">Course ID*</label>
+      <input
+        type="text"
+        id="courseId"
+        class="form-control"
+        formControlName="courseId"
+        placeholder="Enter course ID"
+        required
+      />
+      <div *ngIf="addSubjectForm?.get('courseId')?.invalid && addSubjectForm?.get('courseId')?.touched" class="text-danger">
+        Course ID is required.
+      </div>
+    </div>
+
+    <!-- Full Name of Course Input -->
+    <div class="mb-3">
+      <label for="fullName" class="form-label">Full Name*</label>
+      <input
+        type="text"
+        id="fullName"
+        class="form-control"
+        formControlName="fullName"
+        placeholder="Enter full name of the course"
+        required
+      />
+      <div *ngIf="addSubjectForm?.get('fullName')?.invalid && addSubjectForm?.get('fullName')?.touched" class="text-danger">
+        Full name is required.
+      </div>
+    </div>
+
+    <!-- Alias (Short-form) Input -->
+    <div class="mb-3">
+      <label for="alias" class="form-label">Alias (Short-form)*</label>
+      <input
+        type="text"
+        id="alias"
+        class="form-control"
+        formControlName="alias"
+        placeholder="Enter alias (short-form)"
+        required
+      />
+      <div *ngIf="addSubjectForm?.get('alias')?.invalid && addSubjectForm?.get('alias')?.touched" class="text-danger">
+        Alias is required.
+      </div>
+    </div>
+
+ <!-- Confirmation Message -->
+<div *ngIf="courseAdded" class="alert alert-success mt-3">
+  Course has been successfully added!
+</div>
+
+<!-- Submit Button -->
+<button type="submit" class="btn btn-primary w-100 add-course-btn" [disabled]="addSubjectForm.invalid">
+  Add Course
+</button>
+
+
+  </form>
+</div>
