@@ -1,0 +1,11 @@
+.container{
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+h1 {
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to h1 */
+  font-weight: bold; /* Make h1 text bold */
+}
+
+p {
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to paragraphs */
+}

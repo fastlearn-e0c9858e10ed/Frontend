@@ -1,0 +1,14 @@
+.card-body {
+  padding-top: 10px; /* Add padding if needed to prevent overlap */
+}
+
+
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  object-fit: cover;
+}

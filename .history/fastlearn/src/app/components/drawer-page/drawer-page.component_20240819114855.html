@@ -1,0 +1,43 @@
+<!-- Drawer Icon -->
+<i class="bi bi-list navbar-icon mr-2" style="font-size: 24px; cursor: pointer;" (click)="toggleDrawer()"></i>
+
+<div class="drawer" [ngClass]="{'drawer-open': isDrawerOpen}">
+  <div class="drawer-content">
+    <div class="drawer-header">
+      <i class="bi bi-list fast-icon"></i> <!-- Fast icon -->
+      <h4 class="drawer-title">P P G</h4>
+      <button type="button" class="btn btn-secondary close-btn" (click)="closeDrawer()">Close</button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section">
+        <div class="drawer-item">
+          <i class="bi bi-house-door tool-icon"></i> <!-- Home icon -->
+          <span class="drawer-item-title">Home</span>
+        </div>
+      </div>
+      <div class="drawer-section">
+        <h1 class="drawer-heading">TOOLS AND SERVICES</h1>
+        <div class="drawer-item">
+          <i class="bi bi-file-earmark-text tool-icon"></i> <!-- Past paper icon -->
+          <span class="drawer-item-title">Past Paper Tool</span>
+        </div>
+        <div class="drawer-item">
+          <i class="bi bi-file-earmark-text tool-icon"></i> <!-- Notes icon -->
+          <span class="drawer-item-title">Notes Tool</span>
+        </div>
+      </div>
+      <div class="drawer-section">
+        <h5 class="drawer-heading">ALL MATERIAL STORED</h5>
+        <div class="drawer-item">
+          <i class="bi bi-database tool-icon"></i> <!-- Database icon -->
+          <span class="drawer-item-title">Past Papers</span>
+        </div>
+        <div class="drawer-item">
+          <i class="bi bi-database tool-icon"></i> <!-- Database icon -->
+          <span class="drawer-item-title">Stored Notes</span>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-footer">Drawer footer</div>
+  </div>
+</div>

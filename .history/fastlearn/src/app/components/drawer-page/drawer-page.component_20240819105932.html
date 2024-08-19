@@ -1,0 +1,17 @@
+<!-- Drawer Icon -->
+ <br>
+<i class="bi bi-list navbar-icon mr-2" style="font-size: 24px; cursor: pointer;" (click)="toggleDrawer()"></i>
+
+<!-- Drawer -->
+<div class="drawer" [ngClass]="{'drawer-open': isDrawerOpen}">
+  <div class="drawer-content">
+    <div class="drawer-header">
+      <h4 class="drawer-title">P P G</h4>
+      <button type="button" class="btn btn-secondary" (click)="closeDrawer()">Close</button>
+    </div>
+    <div class="drawer-body">
+      <p>Home</p>
+    </div>
+    <div class="drawer-footer">Drawer footer</div>
+  </div>
+</div>

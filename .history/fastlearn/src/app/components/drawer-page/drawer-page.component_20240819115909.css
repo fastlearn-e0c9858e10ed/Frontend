@@ -1,0 +1,145 @@
+.drawer {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  height: 100%;
+  background: #97e1f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+.drawer-open {
+  left: 0; /* Show drawer */
+}
+.drawer-content {
+  padding: 15px;
+}
+.drawer-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-icon{
+  padding-right: 25px;
+}
+
+.drawer-body {
+  flex: 1;
+  padding: 20px;
+}
+
+.drawer-section {
+  margin-bottom: 20px;
+}
+
+.drawer-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.drawer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fast-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.drawer-title {
+  flex-grow: 1;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.tool-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.drawer-item-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem; /* Smaller font size */
+}
+/* Ensure text is not bold for sections */
+.drawer-item {
+  font-weight: normal;
+}
+
+/* Optional: Modern scrollbar styling */
+.drawer-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.drawer-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.drawer-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.drawer-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: auto; /* Push footer to the bottom */
+  background-color: #f8f9fa; /* Optional: Background color for better contrast */
+}
+
+.drawer-section {
+  margin-bottom: 10px;
+}
+
+.drawer-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem; /* Smaller font size for footer items */
+  color: #333; /* Text color */
+}
+
+.tool-icon {
+  font-size: 20px; /* Icon size */
+  margin-right: 10px; /* Space between icon and text */
+  color: #007bff; /* Icon color (optional) */
+}
+
+.drawer-item-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem; /* Match font size to .drawer-item */
+  color: #333; /* Text color */
+}
+
+/* Ensure consistency with other drawer styling */
+.drawer-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.drawer-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.drawer-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

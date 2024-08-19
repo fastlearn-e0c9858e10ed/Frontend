@@ -1,0 +1,40 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Footer styling */
+.footer {
+  background-color: #6f819e; /* Dark background color */
+  color: white; /* Text color */
+  width: 100%; /* Full width */
+  left: 0; /* Align to the left edge */
+  bottom: 0; /* Align to the bottom edge */
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+/* Social media section styling */
+.social-media-section {
+  background-color: #89b683; /* Green background color */
+  font-weight: bold;
+}
+
+.social-media-section .text-white {
+  margin-right: 1rem; /* Space between social media icons */
+}
+
+/* Links section styling */
+.links-section .text-uppercase {
+  font-weight: bold; /* Bold text */
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+.links-section hr {
+  width: 60px; /* Line width */
+  background-color: #7c4dff; /* Purple line color */
+  height: 2px; /* Line height */
+}
+
+/* Copyright section styling */
+.copyright-section {
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}

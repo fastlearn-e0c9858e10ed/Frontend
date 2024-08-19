@@ -1,0 +1,122 @@
+.drawer {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  height: 100%;
+  background: #97e1f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+.drawer-open {
+  left: 0; /* Show drawer */
+}
+.drawer-content {
+  padding: 15px;
+}
+.drawer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   border-top: 1px solid #ddd; /* Border at the top of footer */
+  margin-top: auto; /* Push footer to the bottom */
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.drawer-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.drawer-section {
+  margin-bottom: 20px;
+}
+
+.drawer-heading,
+.drawer-footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.drawer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+
+.fast-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.drawer-title {
+  flex-grow: 1;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.tool-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.drawer-item-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem; /* Smaller font size */
+}
+/* Ensure text is not bold for sections */
+.drawer-item {
+  font-weight: normal;
+}
+
+/* Optional: Modern scrollbar styling */
+.drawer-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.drawer-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.drawer-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+/* Style for the image */
+.navbar-icon {
+  width: 60px; /* Width of the image */
+  height: 40px; /* Height of the image */
+  border-radius: 15px; /* Adjust the border-radius for rounded corners */
+  object-fit: cover; /* Ensure the image covers the dimensions without distortion */
+  vertical-align: middle; /* Align the image vertically with the text */
+  margin-right: 10px; /* Space between the image and the text */
+}
+
+/* Style for the drawer title */
+.drawer-title {
+  font-family: 'Montserrat', sans-serif; /* Font family */
+  font-size: 15px; /* Font size */
+  font-weight: bold; /* Font weight */
+  color: #333; /* Text color */
+  margin: 0; /* Remove default margins */
+  display: inline-block; /* Align with the image */
+  vertical-align: middle; /* Ensure vertical alignment with the image */
+}
