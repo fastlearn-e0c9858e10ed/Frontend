@@ -1,0 +1,176 @@
+<!-- Form Container -->
+<div class="container">
+  <h2>Upload Your Past Paper</h2>
+
+  <!-- Alert before submission -->
+  <div *ngIf="showAlert" class="alert alert-warning" role="alert">
+    Are you sure you want to upload this past paper?
+    <button type="button" class="btn btn-primary ms-3" (click)="confirmUpload()">Yes</button>
+    <button type="button" class="btn btn-secondary ms-2" (click)="cancelUpload()">No</button>
+  </div>
+
+  <!-- Success message after upload -->
+  <div *ngIf="showSuccessMessage" class="alert alert-success" role="alert">
+    Past paper uploaded successfully!
+  </div>
+
+  <form
+    [formGroup]="myForm"
+    (ngSubmit)="onSubmit()"
+    class="needs-validation"
+    novalidate
+  >
+    <!-- Dropdown for Year -->
+    <div class="mb-3">
+      <label for="selectYear" class="form-label">Select Year*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select
+          formControlName="year"
+          id="selectYear"
+          placeholder="Choose a year"
+        >
+          <mat-option *ngFor="let year of years" [value]="year">
+            {{ year }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+<!-- Dropdown for Subject -->
+<div class="mb-3">
+  <label for="selectSubject" class="form-label">Select Subject*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="subject_id"
+      id="selectSubject"
+      placeholder="Choose a subject"
+    >
+      <mat-option *ngFor="let option of getOptionsByCategory('subject')" [value]="option.value">
+        {{ option.viewValue }} <!-- Display subject name and code -->
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Add Subject Button Section -->
+  <div class="d-flex align-items-center mt-2">
+    <p class="mb-0 me-2">If the subject does not exist*</p>
+    <button type="button" class="btn btn-success" (click)="redirectToAddSubject()">
+      Add New Subject
+    </button>
+  </div>
+</div>
+
+
+    <!-- Dropdown for Season -->
+    <div class="mb-3">
+      <label for="selectSeason" class="form-label">Select Season*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select
+          formControlName="season"
+          id="selectSeason"
+          placeholder="Choose a season"
+        >
+          <mat-option *ngFor="let season of sessions" [value]="season">
+            {{ season }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Type -->
+    <div class="mb-3">
+      <label for="selectType" class="form-label">Select Type*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select
+          formControlName="paper_type"
+          id="selectType"
+          placeholder="Choose a type"
+        >
+          <mat-option *ngFor="let type of types" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+ <!-- Dropdown for Semester -->
+<div class="mb-3">
+  <label for="selectSemester" class="form-label">Select Semester*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="semester"
+      id="selectSemester"
+      placeholder="Choose a semester"
+    >
+      <mat-option *ngFor="let semester of semesters" [value]="semester">
+        {{ semester }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<!-- Dropdown for Session -->
+<div class="mb-3">
+  <label for="selectSession" class="form-label">Select Session*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="session"
+      id="selectSession"
+      placeholder="Choose a session"
+    >
+      <mat-option *ngFor="let session of sessions" [value]="session">
+        {{ session }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<!-- Date Picker -->
+<div class="mb-3">
+  <label for="inputDate" class="form-label">Select Date*</label>
+  <input type="date" formControlName="date" class="form-control" id="inputDate" required>
+</div>
+
+
+<!-- Dropdown for Semester -->
+<div class="mb-3">
+  <label for="selectSemester" class="form-label">Select Semester*</label>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-select
+      formControlName="semester"
+      id="selectSemester"
+      placeholder="Choose a semester"
+    >
+      <mat-option *ngFor="let semester of semesters" [value]="semester">
+        {{ semester }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<!-- Date Picker for Date -->
+<div class="mb-3">
+  <label for="inputDate" class="form-label">Upload Date*</label>
+  <input
+    type="date"
+    class="form-control"
+    id="inputDate"
+    formControlName="date"
+    placeholder="Choose a date"
+  />
+</div>
+    <!-- File Upload -->
+    <div class="mb-3">
+      <label for="uploadPdf" class="form-label">Upload PDF*</label>
+      <input
+        type="file"
+        class="form-control"
+        id="uploadPdf"
+        (change)="onFileChange($event)"
+        accept=".pdf"
+        placeholder="Choose a file"
+      />
+    </div>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary w-100" [disabled]="myForm.invalid || !selectedFile">Upload</button>
+  </form>
+</div>
