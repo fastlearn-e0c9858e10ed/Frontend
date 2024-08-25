@@ -1,0 +1,62 @@
+<app-redirect-homepage></app-redirect-homepage>
+
+<div class="pastpaper-container">
+  <h1 class="title">PAST PAPER DATABASE</h1>
+  <div class="filter-section mb-4">
+    <select class="form-select me-2" [(ngModel)]="selectedYear" (change)="filterPapers()" aria-label="Year">
+      <option [ngValue]="null">Years</option>
+      <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+
+    <select class="form-select me-2" [(ngModel)]="selectedSemester" (change)="filterPapers()" aria-label="Semester">
+      <option value="">Semesters</option>
+      <option *ngFor="let semester of semesters" [value]="semester">{{ semester }}</option>
+    </select>
+
+    <select class="form-select me-2" [(ngModel)]="selectedPaperType" (change)="filterPapers()" aria-label="Paper Type">
+      <option value="">Paper Types</option>
+      <option *ngFor="let paper_type of paper_types" [value]="paper_type">{{ paper_type }}</option>
+    </select>
+
+    <select class="form-select me-2" [(ngModel)]="selectedSession" (change)="filterPapers()" aria-label="Session">
+      <option value="">Sessions</option>
+      <option *ngFor="let session of sessions" [value]="session">{{ session }}</option>
+    </select>
+
+    <select class="form-select me-2" [(ngModel)]="selectedSubjectId" (change)="filterPapers()" aria-label="Subject">
+      <option value="">Subjects</option>
+      <option *ngFor="let subject of subjects" [value]="subject.id">{{ subject.name }}</option>
+    </select>
+
+    <input
+  type="text"
+  class="form-control"
+  [(ngModel)]="searchQuery"
+  (input)="filterPapers()"
+  placeholder="Search Past paper"
+  aria-label="Search"
+/>
+
+  </div>
+  <div class="papers-list">
+    <div *ngIf="filteredPapers.length > 0; else noPapers" class="row">
+      <div *ngFor="let paper of filteredPapers" class="col-md-4 mb-3">
+        <div class="card paper-card">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <div class="paper-details">
+              <h5 class="card-title mb-0">{{ paper.name }}</h5>
+              <p class="card-text text-muted">{{ paper.id }}</p> <!-- Displaying the ID -->
+            </div>
+            <button class="btn btn-primary" title="Download" (click)="downloadPaper(paper)">
+              <i class="bi bi-download"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noPapers>
+    <p>No past papers found.</p>
+  </ng-template>
+</div>

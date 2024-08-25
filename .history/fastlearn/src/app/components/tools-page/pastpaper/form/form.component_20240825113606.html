@@ -1,0 +1,133 @@
+<!-- Form Container -->
+<div class="container">
+  <h2>Upload Your Past Paper</h2>
+
+  <form
+    [formGroup]="myForm"
+    (ngSubmit)="onSubmit()"
+    class="needs-validation"
+    novalidate
+  >
+    <!-- Dropdown for Year -->
+    <div class="mb-3">
+      <label for="selectYear" class="form-label">Select Year*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select formControlName="year" id="selectYear">
+          <mat-option *ngFor="let year of years" [value]="year">
+            {{ year }}
+          </mat-option>
+        </mat-select>
+        <div *ngIf="myForm.get('year')?.invalid && myForm.get('year')?.touched" class="text-danger">
+          Year is required.
+        </div>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Subject -->
+    <div class="mb-3">
+      <label for="selectSubject" class="form-label">Select Subject*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select
+          formControlName="subject_id"
+          id="selectSubject"
+        >
+          <mat-option *ngFor="let option of getOptionsByCategory('subject')" [value]="option.value">
+            {{ option.viewValue }} <!-- Display subject name and code -->
+          </mat-option>
+        </mat-select>
+        <div *ngIf="myForm.get('subject_id')?.invalid && myForm.get('subject_id')?.touched" class="text-danger">
+          Subject is required.
+        </div>
+      </mat-form-field>
+
+      <!-- Add Subject Button Section -->
+      <div class="d-flex align-items-center mt-2">
+        <p class="mb-0 me-2">If the subject does not exist*</p>
+        <button type="button" class="btn btn-success" (click)="redirectToAddSubject()">
+          Add New Subject
+        </button>
+      </div>
+    </div>
+
+    <!-- Dropdown for Type -->
+    <div class="mb-3">
+      <label for="selectType" class="form-label">Select Type*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select
+          formControlName="type"
+          id="selectType"
+        >
+          <mat-option *ngFor="let type of types" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+        <div *ngIf="myForm.get('type')?.invalid && myForm.get('type')?.touched" class="text-danger">
+          Type is required.
+        </div>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Semester -->
+    <div class="mb-3">
+      <label for="selectSemester" class="form-label">Select Semester*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select
+          formControlName="semester"
+          id="selectSemester"
+        >
+          <mat-option *ngFor="let semester of semesters" [value]="semester">
+            {{ semester }}
+          </mat-option>
+        </mat-select>
+        <div *ngIf="myForm.get('semester')?.invalid && myForm.get('semester')?.touched" class="text-danger">
+          Semester is required.
+        </div>
+      </mat-form-field>
+    </div>
+
+    <!-- Dropdown for Session -->
+    <div class="mb-3">
+      <label for="selectSession" class="form-label">Select Session*</label>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-select
+          formControlName="session"
+          id="selectSession"
+        >
+          <mat-option *ngFor="let session of sessions" [value]="session">
+            {{ session }}
+          </mat-option>
+        </mat-select>
+        <div *ngIf="myForm.get('session')?.invalid && myForm.get('session')?.touched" class="text-danger">
+          Session is required.
+        </div>
+      </mat-form-field>
+    </div>
+
+    <!-- Date Input -->
+    <div class="mb-3">
+      <label for="inputDate" class="form-label">Select Date*</label>
+      <input type="date" formControlName="date" id="inputDate" class="form-control">
+      <div *ngIf="myForm.get('date')?.invalid && myForm.get('date')?.touched" class="text-danger">
+        Date is required.
+      </div>
+    </div>
+
+    <!-- File Upload Input -->
+    <div class="mb-3">
+      <label for="uploadPdf" class="form-label">Upload PDF*</label>
+      <input
+        type="file"
+        class="form-control"
+        id="uploadPdf"
+        (change)="onFileChange($event)"
+        accept=".pdf"
+      />
+      <small *ngIf="selectedFile" class="form-text text-success">
+        File selected: {{ selectedFile.name }}
+      </small>
+      <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100" [disabled]="myForm.invalid">Upload</button>
+  </form>
+</div>
